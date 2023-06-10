@@ -1,20 +1,105 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true"> 
+  <ion-toolbar> 
+    <ion-title class="ion-text-center">Masukkan Data</ion-title> 
+  </ion-toolbar> 
+</ion-header> 
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+<ion-content [fullscreen]="true"> 
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-header collapse="condense"> 
+    <ion-toolbar> 
+      <ion-title size="large">Masukkan Data</ion-title> 
+    </ion-toolbar> 
+  </ion-header> 
+ 
+  <div class="ion-padding"> 
+    
+    <ion-item> 
+      <ion-label position="floating">NIK</ion-label> 
+      <ion-input type="number" placeholder="Input Data" [(ngModel)]="form.nik"></ion-input> 
+    </ion-item> 
+    <ion-item> 
+      <ion-label position="floating">Nama</ion-label> 
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.nama"></ion-input> 
+    </ion-item> 
+    <ion-item> 
+      <ion-label position="floating">Tempat Lahir</ion-label> 
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.tempat_lahir"></ion-input> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Tanggal Lahir</ion-label> 
+      <ion-input type="date" placeholder="Input Data" [(ngModel)]="form.tanggal_lahir"></ion-input> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Jenis Kelamin</ion-label> 
+      <ion-select [(ngModel)]="form.jenis_kelamin"> 
+        <ion-select-option value="L">Laki-laki</ion-select-option> 
+        <ion-select-option value="P">Perempuan</ion-select-option> 
+      </ion-select> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Alamat</ion-label> 
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.alamat"></ion-input> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Agama</ion-label> 
+      <ion-select [(ngModel)]="form.agama"> 
+        <ion-select-option value="Islam">ISLAM</ion-select-option> 
+        <ion-select-option value="Kristen">KRISTEN</ion-select-option> 
+        <ion-select-option value="Katolik">KATHOLIK</ion-select-option> 
+        <ion-select-option value="Hindu">HINDU</ion-select-option> 
+        <ion-select-option value="Budha">BUDHA</ion-select-option> 
+      </ion-select> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Status Perkawinan</ion-label> 
+      <ion-select [(ngModel)]="form.status_perkawinan"> 
+        <ion-select-option value="Belum Kawin">Belum Kawin</ion-select-option> 
+        <ion-select-option value="Kawin">Kawin</ion-select-option> 
+ 
+      </ion-select> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Pekerjaan</ion-label> 
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.pekerjaan"></ion-input> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Kewarganegaraan</ion-label> 
+      <ion-select [(ngModel)]="form.kewarganegaraan"> 
+        <ion-select-option value="WNI">WNI</ion-select-option> 
+        <ion-select-option value="WNA">WNA</ion-select-option> 
+      </ion-select> 
+    </ion-item> 
+ 
+    <ion-item> 
+      <ion-label position="floating">Berlaku Hingga</ion-label> 
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.berlaku_hingga"></ion-input> 
+    </ion-item> 
+ 
+    <br> 
+    <ion-button expand="block" (click)="sendToWhatsapp()"> 
+      <ion-icon name="send"></ion-icon>&nbsp; 
+      Send To WhatsApp 
+    </ion-button> 
+ 
+    <ion-button expand="block" (click)="sendToTelegram()"> 
+      <ion-icon name="send"></ion-icon>&nbsp; 
+      Send To Telegram 
+    </ion-button> 
+ 
+     
+    <ion-button expand="block" (click)="sendToEmail()"> 
+      <ion-icon name="send"></ion-icon>&nbsp; 
+      Send To Email 
+    </ion-button> 
+  </div> 
+ 
 </ion-content>
